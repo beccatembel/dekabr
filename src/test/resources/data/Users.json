@@ -1,0 +1,18 @@
+{
+  "valid": {
+    "email": "valid@mail.com",
+    "password": "#Valid001"
+  },
+  "invalid": {
+    "email": "invalid@mail.com",
+    "password": "#Invalid001"
+  },
+  "uppercaseEmail": {
+    "email": "VALID@MAIL.COM",
+    "password": "#Invalid001"
+  },
+  "newPassword": {
+    "email": "valid@mail.com",
+    "password": "#NewValid001"
+  }
+}

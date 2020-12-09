@@ -39,7 +39,7 @@ This framework has packages which are as below:
   repository for the same.
 
 * `runners` :-
-  This package has class which run the feature files according to the test cases. In this package we can calling the feature files.
+  This package has class which run the feature files according to the test cases. In this package we can call the feature files.
   Runner class call the cucumber feature file by adding @CucumberOptions annotation (which is used to configuration for feature file).
 
 * `steps` :-
@@ -50,12 +50,12 @@ This framework has packages which are as below:
   In this Folder you can create all the feature files which has steps to be followed in Automation Script.
 
 * `data` :-
-  Data Folder has Json files for Users and .csv file for ui information which is used to take user name and password for login.
+  Data Folder has Json files for Users and .csv file for ui information which is used to take username and password for login.
 
 * `pom.xml` :-
   Pom.xml file is very important. It will include all dependencies and download automatically in its repository. 
   So we don’t need to add external jar files to project.
 
 # How to Run the project
-We are using maven build, so it has pom.xml file. This file has all the configuration of the project. 
+I am using maven build, so it has pom.xml file. This file has all the configuration of the project. 
 Project will run automatically when we will have access to web-application. We should update all locators for our WebElements.

@@ -2,19 +2,18 @@
 **Author: Nazar Hommenov**
 https://www.linkedin.com/in/nazar-h-98b4811b6/
 
-### BDD framework for automation using Selenium Cucumber and TestNg
+### BDD framework for automation using Selenium Cucumber and JUnit
 
-The purpose of the project is to display BDD framework for digital web application using combination of leading edge tools like Selenium & Cucumber
+The purpose of the project is to display BDD framework for web application using Selenium & Cucumber
 
 ## Tools & Technologies
 
 * Automation Tools : Selenium Web Driver & Cucumber
 * Project Setup : Apache maven
-* Data driven Testing Framework : Apache POI
 * Object Repository Design Pattern : Page Object Model
 * Test Execution Report:  Cucumber pretty-report
 * Browser Compatibility: Cross Browser Execution
-* Screenshot:  Take screenshot failure test cases
+* Screenshot: Take screenshot failure test cases
 * Implicit wait
 * Assertions : Hard
 

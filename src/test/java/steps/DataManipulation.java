@@ -59,7 +59,7 @@ public class DataManipulation {
 
     @Given("User is able to search by team name")
     public void userIsAbleToSearchByTeamName() {
-        homePage.selectTeamName(homePage.selectTeamName);
+        homePage.selectTeamName(homePage.selectTeamName, "Team 1");
     }
 
     @Then("Verifying searched data by team name show on ui")

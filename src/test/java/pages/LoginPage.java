@@ -10,9 +10,6 @@ import utilities.Driver;
 import utilities.PropertyUtils;
 import utilities.Users;
 
-import java.io.IOException;
-
-import static io.restassured.RestAssured.given;
 import static utilities.Constants.MAIL;
 
 public class LoginPage {

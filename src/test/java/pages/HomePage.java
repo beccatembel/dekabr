@@ -52,7 +52,7 @@ public class HomePage {
 
 
     /***
-     * This method verifying tags is displayed
+     * This method is verifying tags are displayed
      */
     public void tagsIsDisplayed() {
         for (int i = 0; i < gameDate.size(); i++) {
@@ -63,7 +63,7 @@ public class HomePage {
     }
 
     /***
-     * This method verifying images is displayed
+     * This method is verifying images are displayed
      */
     public void imageDisplayed() {
         for (int i = 0; i < imageList.size(); i++) {
@@ -72,7 +72,7 @@ public class HomePage {
     }
 
     /***
-     * This method verifying images path is matched from UI and DB
+     * This method is verifying images path is matched from UI and DB
      */
     public void imageVerification() {
         JDBCUtils.establishConnection();
@@ -90,7 +90,7 @@ public class HomePage {
     }
 
     /***
-     * This method verifying tags is matched from UI and DB
+     * This method is verifying tags are matched from UI and DB
      */
     public void tagsVerification() {
         JDBCUtils.establishConnection();
@@ -154,7 +154,7 @@ public class HomePage {
     }
 
     /***
-     * This method compare sorted teamName from UI with sorted date from DB
+     * This method is comparing sorted teamName UI with sorted by date from DB
      * @throws ParseException
      */
     public void sortTeamNameVerification() throws ParseException {
@@ -162,7 +162,7 @@ public class HomePage {
         List<Map<String, Object>> selectDataFromTables = null;
 
         try {
-            selectDataFromTables = JDBCUtils.runQuery("SELECT TEAM_DATE FROM TABLE ORDER BY TEAM_DATE");
+            selectDataFromTables = JDBCUtils.runQuery("SELECT TEAM_NAME FROM TABLE ORDER BY TEAM_NAME");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -182,12 +182,12 @@ public class HomePage {
     }
 
     /***
-     * This method will choose select option by value
+     * This method will select option by value
      * @param teamName
      */
-    public void selectTeamName(WebElement teamName) {
-        Select selectTeamName = new Select(teamName);
-        selectTeamName.selectByValue("Team 1");
+    public void selectTeamName(WebElement teamNameDropdown, String teamName) {
+        Select selectTeamName = new Select(teamNameDropdown);
+        selectTeamName.selectByValue(teamName);
     }
 
     /***

@@ -1,6 +1,6 @@
 @auth @regression @smoke
 Feature: Testing Log in functionality
-
+# Basically background is like @Before method for similar steps
   Background: Navigating to Web application
     Given User navigates to "URL" application
     Then Verify User successfully navigated to this app

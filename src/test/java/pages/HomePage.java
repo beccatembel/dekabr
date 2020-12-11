@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import utilities.Driver;
 import utilities.JDBCUtils;
-import utilities.PropertyUtils;
+import utilities.CommonUtils;
 
 import java.io.*;
 import java.sql.SQLException;
@@ -17,7 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class HomePage {
-    WebDriver driver = Driver.getDriver(PropertyUtils.getProperty("browser"));
+    WebDriver driver = Driver.getDriver(CommonUtils.getProperty("browser"));
 
     public HomePage() {
         PageFactory.initElements(driver, this);

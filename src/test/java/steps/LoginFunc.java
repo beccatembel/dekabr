@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.LoginPage;
 import utilities.Driver;
-import utilities.PropertyUtils;
+import utilities.CommonUtils;
 
 public class LoginFunc {
     WebDriver driver = Driver.getDriver("browser");
@@ -15,7 +15,7 @@ public class LoginFunc {
 
     @Given("User navigates to {string} application")
     public void userNavigatesToApplication(String URL) {
-        driver.navigate().to(PropertyUtils.getProperty(URL));
+        driver.navigate().to(CommonUtils.getProperty(URL));
     }
 
     @Then("Verify User successfully navigated to this app")

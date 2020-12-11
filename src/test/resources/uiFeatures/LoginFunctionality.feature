@@ -1,4 +1,4 @@
-@auth @regression @smoke
+@ui @regression @smoke
 Feature: Testing Log in functionality
 # Basically background is like @Before method for similar steps
   Background: Navigating to Web application

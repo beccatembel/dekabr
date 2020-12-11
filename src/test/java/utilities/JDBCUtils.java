@@ -19,9 +19,9 @@ public class JDBCUtils {
     public static void establishConnection() {
         try {
             connection = DriverManager.getConnection(
-                    PropertyUtils.getProperty(DBURL),
-                    PropertyUtils.getProperty(DBUsername),
-                    PropertyUtils.getProperty(DBPassword)
+                    CommonUtils.getProperty(DBURL),
+                    CommonUtils.getProperty(DBUsername),
+                    CommonUtils.getProperty(DBPassword)
             );
             statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         } catch (SQLException throwables) {

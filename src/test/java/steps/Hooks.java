@@ -7,13 +7,13 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import utilities.Driver;
-import utilities.PropertyUtils;
+import utilities.CommonUtils;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {
-    WebDriver driver = Driver.getDriver(PropertyUtils.getProperty("browser"));
+    WebDriver driver = Driver.getDriver(CommonUtils.getProperty("browser"));
 
     @Before
     public void setUp(){
@@ -27,6 +27,7 @@ public class Hooks {
             byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "Failed part");
         }
+        CommonUtils.takeScreenshot(driver, "Test Scenario");
         driver.quit();
     }
 }

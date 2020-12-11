@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 )
 
 /***
- * Run all test suites
+ * Run all failed test suites
  */
 public class ReRunner {
 

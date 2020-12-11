@@ -7,13 +7,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
-import utilities.PropertyUtils;
+import utilities.CommonUtils;
 import utilities.Users;
 
 import static utilities.Constants.MAIL;
 
 public class LoginPage {
-    WebDriver driver = Driver.getDriver(PropertyUtils.getProperty("browser"));
+    WebDriver driver = Driver.getDriver(CommonUtils.getProperty("browser"));
     Users users = new Users();
 
     public LoginPage() {
@@ -83,7 +83,7 @@ public class LoginPage {
      * @param credentials
      */
     public void checkMail(String credentials) {
-        driver.navigate().to(PropertyUtils.getProperty(MAIL));
+        driver.navigate().to(CommonUtils.getProperty(MAIL));
         checkMailInput.sendKeys(users.usersEmail(credentials) + Keys.ENTER);
         if (checkMailInbox.isDisplayed()) {
             checkMailInbox.click();

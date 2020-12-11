@@ -1,11 +1,16 @@
 package utilities;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PropertyUtils {
+public class CommonUtils {
     /***
      * This method read properties from files using FileInputStream
      * @param pathToPropertyFile
@@ -35,5 +40,18 @@ public class PropertyUtils {
             ex.printStackTrace();
             throw new RuntimeException();
         }
+    }
+
+    /***
+     * This method takes screenshot
+     * @param driver
+     * @param testName
+     * @throws IOException
+     */
+    public static void takeScreenshot(WebDriver driver, String testName) throws IOException {
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String destination = "src/test/java/screenshotFile/" + testName + System.currentTimeMillis() + ".png";
+        File destScreenshot = new File(destination);
+        FileUtils.copyFile(screenshot, destScreenshot);
     }
 }
